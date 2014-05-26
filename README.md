@@ -1,0 +1,4 @@
+wordsdic
+========
+
+proxy dictionary server
