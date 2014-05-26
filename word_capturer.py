@@ -27,16 +27,10 @@ class WordSniffer(controller.Master):
             word_dict = word.__dict__
             word_dict['inserted_time'] = datetime.now()
 
-            print word_dict
-
             self.datamanager.save(word_dict)
             
-            #msg_dict = msg.__dict__
-            #request_dict = msg_dict['request'].__dict__
-            #print request_dict
             #'/search.do?dic=eng&q=dissemble'
             #'/word/view.do?wordid=ekw000048341&q=dissemble'
-
         msg.reply()
 
 config = proxy.ProxyConfig(

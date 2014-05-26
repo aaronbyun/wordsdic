@@ -8,6 +8,6 @@ class DataManager(object):
 
     def save(self, instance):
         print type(instance)
-        result = self.col.find({'text' : instance['text']})
-        if not result.count() > 0:
+        result = self.col.find_one({'text' : instance['text']})
+        if result == None:
             self.col.insert(instance)
