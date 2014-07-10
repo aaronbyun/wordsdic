@@ -11,3 +11,6 @@ class DataManager(object):
         result = self.col.find_one({'text' : instance['text']})
         if result == None:
             self.col.insert(instance)
+
+    def find(self, condition={}):
+        return self.col.find(condition)
