@@ -14,3 +14,6 @@ class DataManager(object):
 
     def find(self, condition={}):
         return self.col.find(condition)
+
+    def count(self):
+        return self.col.count()

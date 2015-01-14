@@ -24,13 +24,9 @@ class WordSniffer(controller.Master):
 
         msg.reply()
 
-        print host, path
         if host == 'dic.daum.net' and '/word/view.do' in path:
             word = self.daumdicparser.parse(msg.content)
             word_dict = word.__dict__
-
-            print word_dict
-
             word_dict['inserted_time'] = datetime.now()
 
             self.datamanager.save(word_dict)
